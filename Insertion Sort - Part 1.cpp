@@ -15,7 +15,20 @@ vector<string> split(const string &);
  */
 
 void insertionSort1(int n, vector<int> arr) {
+    int key = arr[n - 1];
+    int i = n - 2;
 
+    while (i >= 0 && arr[i] > key) {
+        arr[i + 1] = arr[i];
+        for (int k = 0; k < n; k++) cout << arr[k] << " ";
+        cout << endl;
+        i--;
+    }
+
+    arr[i + 1] = key;
+
+    for (int k = 0; k < n; k++) cout << arr[k] << " ";
+    cout << endl;
 }
 
 int main()
